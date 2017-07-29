@@ -4,7 +4,7 @@ var app = express();
 app.get('/',function(req,res) {
    // res.status(200).send("Hello World!");
   //con render trabajamos los archivos jade
-  res.render('ver',{m_title: 'Bienvenido a Nuestro Proyecto de Nodejs, Express y socket'});
+  res.render('index',{m_title: 'Bienvenido a Nuestro Proyecto de Nodejs, Express y socket'});
 });
 
 
