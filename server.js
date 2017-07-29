@@ -6,11 +6,7 @@ var rutas = require("./routes_app.js");
 //socket io - aqui donde manejamos el realtime de paginas simultaneo
 var io = require('socket.io')(http);
 
-const port = process.env.PORT || 8080 
-
-//llamamos el metodo log
-var log = require('log');
-   log = new log('debug');
+const port = process.env.PORT || 3000 
 
 //configurar nuestros archivos estaticos , html,css,js,img.
 app.use('/static',express.static(__dirname+ '/static'));
