@@ -13,7 +13,7 @@ app.use(express.static(__dirname+ '/static'));
 
 //setear variables views express - Configurar nuestro directorio raiz de las vistas dinamicas como jade
 app.set(__dirname + '/views');
-
+app.set('view engine', 'html');
 
 app.get('/',function(req,res) {
    // res.status(200).send("Hello World!");
