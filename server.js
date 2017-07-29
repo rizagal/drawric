@@ -28,7 +28,7 @@ app.set('view engine','ejs');
 //Cargamos el archivo de rutas
 app.use("/",rutas);
 
-http.listen(8080,function(){
+http.listen(3000,function(){
    console.log('Nuestro servidor esta escuchando el puerto: 3000');
 
 });
