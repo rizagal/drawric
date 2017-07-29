@@ -17,7 +17,7 @@ app.use('/static',express.static(__dirname+ '/static'));
 
 //setear variables views express - Configurar nuestro directorio raiz de las vistas dinamicas como jade
 app.set('views',__dirname + '/views');
-app.set('view engine','ejs');
+
 
 //Cargamos el archivo de rutas
 app.use("/",rutas);
