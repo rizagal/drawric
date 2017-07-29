@@ -5,7 +5,7 @@ var http = require('http').Server(app);
 var rutas = require("./routes_app.js");
 //socket io - aqui donde manejamos el realtime de paginas simultaneo
 var io = require('socket.io')(http);
-var streamingService = require('./lib/service/streamingService');
+
 const port = process.env.PORT || 8080 
 
 //llamamos el metodo log
@@ -23,7 +23,7 @@ app.set('view engine','ejs');
 app.use("/",rutas);
 
 
-http.listen(8080,function(){
+http.listen(port,function(){
    console.log('Nuestro servidor esta escuchando el puerto: 8080');
 
 });
