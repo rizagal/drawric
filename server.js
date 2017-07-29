@@ -9,8 +9,8 @@ var port = process.env.PORT || 8080;
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
-// make express look in the public directory for assets (css/js/img)
-app.use(express.static(__dirname + '/public'));
+//configurar nuestros archivos estaticos , html,css,js,img.
+app.use(express.static(__dirname + '/static'));
 
 // set the home page route
 app.get('/', function(req, res) {
