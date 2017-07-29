@@ -6,7 +6,7 @@ var rutas = require("./routes_app.js");
 //socket io - aqui donde manejamos el realtime de paginas simultaneo
 var io = require('socket.io')(http);
 var streamingService = require('./lib/service/streamingService');
-const port = process.env.PORT || 3000 
+const port = process.env.PORT || 8080 
 //cargar archivo de cofiguracion en variable global
 global.config = require('./config');
 //enviar variables a nuestros templates
@@ -29,7 +29,7 @@ app.set('view engine','ejs');
 app.use("/",rutas);
 
 
-http.listen(3000,function(){
+http.listen(8080,function(){
    console.log('Nuestro servidor esta escuchando el puerto: 3000');
 
 });
