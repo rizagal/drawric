@@ -9,10 +9,10 @@ var io = require('socket.io')(http);
 const port = process.env.PORT || 3000 
 
 //configurar nuestros archivos estaticos , html,css,js,img.
-app.use('/static',express.static(__dirname+ '/static'));
+app.use(express.static(__dirname+ '/static'));
 
 //setear variables views express - Configurar nuestro directorio raiz de las vistas dinamicas como jade
-app.set('views',__dirname + '/views');
+app.set(__dirname + '/views');
 
 
 app.get('/',function(req,res) {
