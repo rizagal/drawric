@@ -1,0 +1,29 @@
+#logo{
+ margin-top: -5px;
+ margin-left: -10px;
+}
+
+#conte-principal{
+    margin-left: 10px;
+}
+
+.puntero{
+   cursor: pointer;
+}
+
+/*esta clase para asingar valor de padding entre columnas de bootstrap*/
+.sinpadding [class*="col-"] {
+    padding: 2px;
+}
+
+/*esta clase para asingar valor de padding entre columnas de bootstrap*/
+.sinpadding_titulo [class*="col-"] {
+     padding-top: 1.5px;
+     padding-right: 2px;
+     padding-bottom: -3px;
+     padding-left : 2px;    
+   }
+      
+.border_text{
+ border-color: Green;
+}

@@ -1,0 +1,10 @@
+     --------------SERVER.JS----------------------------------------------------
+
+1-6: Configuracion Librerias Requeridas
+8-17: Configuracion Carpetas Estaticas
+20-46: Rutas de Paginas Web
+49-52: Activar el Servidor de HTTP - 
+54-66: El Array que se utiliza para los mensajes del Chat
+68-111: Configuracion de la Comunicacion Socket.io
+119-127: Configuracion de la liberia MSSQL
+129-160: Conexion con el servidor de base de datos MSSQL y manejo de la tabla gen_p_centro_costos-

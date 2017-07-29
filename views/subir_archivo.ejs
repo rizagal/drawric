@@ -1,0 +1,10 @@
+<% include plantillas/nav2.ejs %> 
+<!--CONTENIDO-->
+
+<form action="/upload" method="POST" enctype="multipart/form-data">
+   <input type="file" name="userarchivo">   
+   <input type="submit" value="Subir">
+   <p id="label_noti"<b><%= m_confirma %></b></p>
+</form>
+<!--El script donde se recibe el formulario esta en routes_app.js-->
+ <% include piepagina.ejs %>

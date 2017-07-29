@@ -1,0 +1,21 @@
+/*-----------------------Configuracion Loggin */
+body { 
+  background: url(/static/imagenes/termales.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.panel-default {
+opacity: 0.9;
+margin-top:30px;
+}
+.form-group.last { margin-bottom:0px; }
+
+ .logo{
+ margin-top: -8px;
+ margin-left: -5px;
+margin-right: 2px;
+}

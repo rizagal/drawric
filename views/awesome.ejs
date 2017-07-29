@@ -1,0 +1,152 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Docs at http://simpleweatherjs.com -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.0.2/jquery.simpleWeather.min.js"></script>
+<!-- Docs at http://www.chartjs.org -->
+<link rel="stylesheet" type="text/css" href="/static/styles/awesome.css">
+<link rel="stylesheet" type="text/css" href="/static/styles/ajusta_video.css"> 
+<script type="text/javascript" src="/static/js/awesome.js"></script>  
+<script src="//www.chartjs.org/assets/Chart.min.js"></script>
+<div class="container">
+   <div class="row">
+      <div class="col-sm-12">
+         <!--
+            ****** NAVIGATION WIDGET *******
+            -->
+         <div id="nav-widget" class="btn-group btn-group-justified">
+            <div class="btn-group">
+             
+               <a href="chat_directo" class="text-uppercase"><button type="button" class="btn text-uppercase"><i class="fa fa-users fa-2x"></i>Salud<span class="badge">6</span></button></a>
+            </div>
+            <div class="btn-group">
+               <a href="#" class="text-uppercase"><button type="button" class="btn text-uppercase"><i class="fa fa-heart-o fa-2x"></i>Tecnologia</button></a>
+            </div>
+            <div class="btn-group">
+               <a href="password" class="text-uppercase"><button type="button" class="btn text-uppercase"><i class="fa fa-user fa-2x"></i>Calidad</button></a>
+            </div>
+            <div class="btn-group">
+               <a href="password" class="text-uppercase"><button type="button" class="btn text-uppercase"><i class="fa fa-pie-chart fa-2x"></i>Proyectos</button></a>
+            </div>
+         </div>
+      </div>
+   </div>
+  <!--Final row principal menu horizontal-->  
+
+ <div class="row">
+       <!-- Inicio Columna -->
+      <div class="col-sm-6 col-md-4 ">
+
+        <div id="primera_columna">
+        </div>
+         
+        <div id="user-widget" class="list-group">
+            <div class="list-group-item heading">
+               <div class="text-wrap">
+                  <h4 class="list-group-item-heading">Humanizacion de los Sistemas de Salud - Dr Jorge Carvajal</h4>                 
+               </div>
+            </div>
+                     <div class="vid">
+                             <!--La unica forma que encontre para que el video nose autovisualizara es por medio de
+                             javascript: awesome.js la lineas estan en este archivo
+                              los videos deben tener una resolucion de ancho: 1280 y alto: 720-->                           
+                        <iframe id="video" width="340" height="315" src="/static/videos/hss.mp4" frameborder="0" allowfullscreen></iframe>
+                     </div>
+        </div>
+
+        <div id="user-widget" class="list-group">
+            <div class="list-group-item heading">
+               <div class="text-wrap">
+                  <h4 class="list-group-item-heading">El Proyecto de Servir - Dr Jorge Carvajal</h4>                 
+               </div>
+            </div>
+                     <div class="vid">
+                             <!--La unica forma que encontre para que el video nose autovisualizara es por medio de
+                             javascript: awesome.js la lineas estan en este archivo
+                              los videos deben tener una resolucion de ancho: 1280 y alto: 720-->                           
+                        <iframe id="video" width="340" height="315" src="/static/videos/proyecto_servir.mp4" frameborder="0" allowfullscreen></iframe>
+                     </div>
+        </div>              
+
+      </div>
+     <!--Final Columna-->  
+
+           
+      <!-- Inicio Columna -->
+      <div class="col-sm-6 col-md-4 ">       
+        <!--Inicio row para crear columnas dentro de otra columna-->
+         <div class="row">
+            <!--Inicio Social Media-->
+            <div class="col-xs-3">
+               <!--
+                  ****** SOCIAL BUTTON WIDGET *******
+                  -->
+               <div id="social-widget" class="btn-group-vertical mrg-btm-20">
+                  <button type="button" class="btn facebook"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></button>
+                  <button type="button" class="btn pinterest"><i class="fa fa-pinterest fa-3x"></i></button>
+                  <button type="button" class="btn twitter"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></button>
+               </div>
+            </div>  
+            <!--Final Social-->
+           <div class="col-xs-9">
+                      <!--
+            ****** USER WIDGET *******
+            -->
+              <div id="user-widget" class="list-group">
+                 <div class="list-group-item heading">
+                    <img class="media-object img-circle" src="static/imagenes/educa/ejes_acredita.jpg">
+                    <div class="text-wrap">
+                     <h4 class="list-group-item-heading">Planeacion Ladera</h4>
+                      <p class="list-group-item-text">15,421 Seguidores</p>
+                    </div>
+                    <div class="clearfix"></div>
+                 </div>
+                  <a href="#" class="list-group-item">
+                     <i class="fa fa-user fa-lg pull-right"></i>
+                      <p class="list-group-item-text">Editar Usuario</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                     <i class="fa fa-bar-chart-o fa-lg pull-right"></i>
+                     <p class="list-group-item-text">Estadisticas de la Web</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                     <i class="fa fa-wrench fa-lg pull-right"></i>
+                     <p class="list-group-item-text">Ver Configuracion</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                     <i class="fa fa-calendar fa-lg pull-right"></i>
+                     <p class="list-group-item-text">Eventos</p>
+                  </a>
+               </div>
+              
+            </div>  
+            <!--Final Columna dentro del row-->
+
+            <div id="segunda_columna" class="col-xs-12">
+                      <!--
+            ****** USER WIDGET DE 12 PARA MANEJAR DESDE BASE DE DATOS*******
+            -->           
+              
+            </div>  
+            <!--Final Columna dentro del row-->
+
+
+
+         </div>
+         <!--Final row que esta dentro de otra columna-->
+
+      </div>
+     <!--Final Columna-->  
+
+      
+      <!-- Inicio Columna -->
+      <div  id="tercera_columna" class="col-sm-6 col-md-4 ">
+        
+        
+      </div>
+     <!--Final Columna--> 
+
+   </div>
+    <!--Final Row-->
+
+</div>
+<!--Final container--> 
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>	
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">     
+      <title> <%= m_title %> </title>
+	    <script type="text/javascript" src="/static/js/jquery-1.11.2.min.js"></script>
+	    <script type="text/javascript" src="/socket.io/socket.io.js"></script>      
+      <link rel="stylesheet" type="text/css" href="/static/styles/cerulean/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="/static/styles/cerulean/bootswatch.min.css">
+      <link rel="stylesheet" type="text/css" href="/static/styles/forma.css">
+</head>
+<body>
+
+   <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">
+              <img id="logo" alt="SIGES" src="/static/imagenes/interacticom.png" style="height: 32px; width: 143px" /></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">INICIO<span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">                
+                <li><a href="emitir">Emitir Camar Web</a></li>
+                <li><a href="visualizar">Ver Trasmision</a></li>
+                <li class="divider"></li>
+                <li><a href="reloj">Reloj Bonito y Conexion de Base de Datos MSSQL</a></li>
+                <li><a href="password">Ver Contraseña</a></li>
+                <li><a href="chat">Chat Tiempo Real</a></li>
+                <li><a href="dibujo">Dibujo en Tiempo Real</a></li>
+                <li><a href="usuarios">Administrador Usuarios</a></li>
+               </ul>
+            </li>
+            <li>
+              <a href="../sitio_mobil/Login_mobil.aspx">INICIAR SESION</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+                  <!--Ubicacion parte izquierda de la Barra Navegadora-->
+           </ul>
+         </div>
+       </div>
+      </div>
+      <br/>

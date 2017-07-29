@@ -1,0 +1,13 @@
+<% include plantillas/nav2.ejs %> 
+<h3>Contador en <span class="contador"></span></h3>
+<div id="pizarra"></div>
+  <button id="save" onclick="actimensaje();return false;">Guardar</button>
+  <input id="Text1" type="text"/>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+         crearLienzo();
+      });     
+  </script>
+<link rel="stylesheet" type="text/css" href="/static/styles/dibujoreal.css">
+<script type="text/javascript" src="/static/js/drawing.js"></script>
+<% include piepagina.ejs %>

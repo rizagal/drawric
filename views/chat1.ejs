@@ -1,0 +1,45 @@
+
+
+<% include plantillas/nav2.ejs %> 
+<!--CONTENIDO-->
+<form onsubmit="return addMessage(this)">
+      <div id="conte-principal" class="container">
+      	 <!--Div donde se visualiza el contenido-->
+         <div class="panel panel-success">
+ 		 	<div class="panel-heading">
+   			 	<h3 class="panel-title">CHATEDU</h3>
+  			</div>
+  		    <div id="messages" class="panel-body">
+           
+            </div>
+         </div>       
+         
+         <div class="row sinpadding">
+                <div class="col-xs-12 col-sm-12 col-md-12">   
+                        <b>Seleccione Avatar</b>
+                       <img id="usu_hom" class="puntero" onclick="asig_avatar_hom();return false;" alt="SIGES" src="/static/imagenes/usuario.png" style="height: 20px; width: 20px" />
+                       <img id="usu_muj" class="puntero" onclick="asig_avatar_mujer();return false;" alt="SIGES" src="/static/imagenes/mujer.png" style="height: 20px; width: 20px" />
+                </div>               
+         </div>  
+         <div class="row sinpadding">
+            <div class="col-xs-4 col-sm-4 col-md-4"> 
+                <input type="text" id="username" class="form-control" placeholder="Tu Nombre">
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8">
+                 <input type="text" id="texto" class="form-control" placeholder="Cuentanos algo...">
+            </div> 
+         </div>
+        <div class="row sinpadding">
+                <div class="col-xs-12 col-sm-12 col-md-12">     
+                        <input type="submit" value="enviar"  class="btn btn-success">
+                </div>               
+         </div>  
+      
+     </div>
+  </form>   
+  <!--El Control que esta oculto debe ir despues del formulario, para que funcione-->
+  <input type="text" id="ruta_imagen" style="display: none;" class="form-control" placeholder="Ruta Imagen por ahora">
+  <link rel="stylesheet" type="text/css" href="/static/styles/dibujoreal.css">
+  <link rel="stylesheet" type="text/css" href="/static/styles/forma.css">
+  <script type="text/javascript" src="/static/js/chat.js"></script> 
+ <% include piepagina.ejs %>

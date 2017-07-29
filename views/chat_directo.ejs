@@ -1,0 +1,41 @@
+<% include plantillas/nav2.ejs %> 
+<% include awesome.ejs %> 
+<!--CONTENIDO-->
+
+<form onsubmit="return addMessage_directo(this)">
+<div class="container">
+    <div class="row chat-window col-xs-10 col-sm-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel_chat panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-10 col-xs-10">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"><input id="usuario" type="text" class="input-sm chat_input" placeholder="Usuario" style="margin-left:6px;" /></span></h3>
+                    </div>
+                    <div class="col-md-2 col-xs-2" style="text-align: right;">                     
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>                        
+                    </div>
+                </div>
+                <div id="messages_directo" class="panel-body msg_container_base">                  
+                       
+                                       
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">                      
+                       <input id="texto" type="text" class="form-control input-sm chat_input" placeholder="Escriba Aqui su Mensaje.." />                  
+                        <span class="input-group-btn">                        
+                         <button type="submit" class="btn btn-primary btn-sm" id="btn-chat">Enviar</button>
+                        </span>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>    
+    
+</div>
+</form>  
+  <!--Fin de contenido-->
+  <link rel="stylesheet" type="text/css" href="/static/styles/chat_directo.css">
+  <link rel="stylesheet" type="text/css" href="/static/styles/forma.css">
+  <script type="text/javascript" src="/static/js/chat_directo_socket.js"></script>  
+  <script type="text/javascript" src="/static/js/chat_directo.js"></script>  
+ <% include piepagina.ejs %>

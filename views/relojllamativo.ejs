@@ -1,0 +1,128 @@
+<% include plantillas/nav2.ejs %> 
+  <canvas id="canvas" width="500" height="500"></canvas>
+
+    <div id="conte-principal" class="container">
+        <div class="row sinpadding">
+            <div class="col-xs-4 col-sm-4 col-md-4"> 
+                <input type="text" id="codigo" class="form-control" placeholder="Codigo">
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+                 <input type="text" id="nombre_c" class="form-control" placeholder="Nombre Costo">
+            </div> 
+            <div class="col-xs-2 col-sm-2 col-md-2">
+                 <input type="text" id="tipo" class="form-control" placeholder="Tipo">
+            </div>
+         </div>
+        <div class="row sinpadding">
+                <div class="col-xs-12 col-sm-12 col-md-12">     
+                        <input type="button" value="Guardar"  class="btn btn-success" onclick='ver_registro();return false;'>
+                </div>               
+         </div> 
+        <!--//Manejo de los campos en una lista, bien ajustada en formato tabla-->
+        <div class="row sinpadding">
+         <div class="col-xs-12 col-sm-12 col-md-10"> 
+          <div id="lista_datos" class="panel panel-primary filterable">
+            <div class="panel-heading">
+                <h3 class="panel-title">Users</h3>
+                <div class="pull-right">
+                    <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                </div>
+            </div>
+             <table id="tbl-clientes"  class="table table-striped table-hover" hidden="hidden">
+               <thead>
+                <tr class="success filters">
+                 
+                        <th><input type="text" class="form-control" placeholder="Codigo" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Nombre" disabled></th>
+                        <th><input type="text" class="form-control" placeholder="Tipo" disabled></th>                 
+                </tr>
+               </thead>
+               <tbody>                
+               </tbody>
+             </table>
+           </div>
+         </div> 
+        </div>
+       <!--// Se trae los Datos pero solo se visualiza en Div sin formato, Por ahora no visualiza datos, deshabilite en el js-->
+        <div class="row sinpadding">
+            <div id="listado_costos" class="col-xs-12 col-sm-12 col-md-12">
+           
+            </div> 
+        </div>
+    </div>   
+<script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var color = '#59DF7A';
+ctx.strokeStyle = '#59df7a';
+ctx.lineWidth = 17;
+ctx.lineCap = 'round';
+ctx.shadowBlur = 15;
+ctx.shadowColor = '#59df7a';
+
+function degToRoad(degree)
+{
+    var factor = Math.PI / 180;
+    return factor * degree;
+}
+
+function renderTime()
+{
+  var now = new Date();
+  var today = now.toDateString();
+  var time = now.toLocaleTimeString();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var milliseconds = now.getMilliseconds();
+  var newSconds = seconds + (milliseconds / 1000);
+  
+  //background
+  var gradient = ctx.createRadialGradient(250,250,1,250,250,300);
+  gradient.addColorStop(0,'#09303a');
+  gradient.addColorStop(1,'black');
+  
+  ctx.fillStyle = gradient;
+  //ctx.fillStyle = '#333333';
+  ctx.fillRect(0, 0, 500, 500);
+  
+  //hours
+  ctx.beginPath();
+  ctx.arc(250,250,200,degToRoad(270),degToRoad((hours*24)-24));
+  ctx.stroke();
+  
+  //minutes
+  ctx.beginPath();
+  ctx.arc(250,250,170,degToRoad(270),degToRoad((minutes*6)-90));
+  ctx.stroke();
+  
+  //seconds
+    
+  ctx.beginPath();
+  ctx.arc(250,250,140,degToRoad(270),degToRoad((newSconds*6)-90));
+  ctx.stroke();
+
+  //if (seconds == 59) {
+    //ver_registro();
+  //} 
+  
+  //date
+  ctx.fillStyle = color;
+  ctx.font = '24px Arial';
+  ctx.fillText(today,170 ,250);
+  
+  //time
+  ctx.fillStyle = color;
+  ctx.font = '15px Arial';
+  ctx.fillText(time,170 ,280);
+
+  }
+
+
+
+setInterval(renderTime,40);
+</script>
+<script type="text/javascript" src="/static/js/filtro_tabla.js"></script>
+<script type="text/javascript" src="/static/js/drawing.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/styles/centralogo.css">
+ <% include piepagina.ejs %>
