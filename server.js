@@ -15,8 +15,11 @@ app.use('/static',express.static(__dirname+ '/static'));
 app.set('views',__dirname + '/views');
 
 
-//Cargamos el archivo de rutas
-app.use("/",rutas);
+app.get('/',function(req,res) {
+   // res.status(200).send("Hello World!");
+  //con render trabajamos los archivos jade
+  res.render('index',{m_title: 'Bienvenido a Nuestro Proyecto de Nodejs, Express y socket'});
+});
 
 
 http.listen(port,function(){
